@@ -36,7 +36,7 @@ public class CheckedAppTest {
             } catch (SQLException e) {
                 log.info("SQLException caught");
             }
-            log.info("ConnectException caught");
+            log.info("ConnectException will fire");
             networkClient.call();
         }
     }

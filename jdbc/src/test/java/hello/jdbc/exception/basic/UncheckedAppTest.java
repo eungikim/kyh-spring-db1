@@ -54,14 +54,11 @@ public class UncheckedAppTest {
     static class Repository {
         public void call() {
             try {
-                runSQL();
+                // run sql and exception will occur
+                throw new SQLException("ex");
             } catch (SQLException e) {
                 throw new RuntimeSQLException(e);
             }
-        }
-
-        public void runSQL() throws SQLException {
-            throw new SQLException("ex");
         }
     }
 
